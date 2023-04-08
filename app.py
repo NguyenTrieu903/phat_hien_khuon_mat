@@ -189,7 +189,7 @@ def framesThreadBody():
 
     while process:
         hasFrame, frame = cap.read()
-        frame = cv.cvtColor(frame, cv.COLOR_BGR2RGB)
+#         frame = cv.cvtColor(frame, cv.COLOR_BGR2RGB)
         if not hasFrame:
             break
         framesQueue.put(frame)
