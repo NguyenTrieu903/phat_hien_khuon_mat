@@ -1,5 +1,3 @@
-OPENCV_VIDEOIO_DEBUG=1
-OPENCV_LOG_LEVEL=0
 import streamlit as st
 import cv2 as cv
 import argparse
@@ -189,7 +187,7 @@ def framesThreadBody():
 
     while process:
         hasFrame, frame = cap.read()
-#         frame = cv.cvtColor(frame, cv.COLOR_BGR2RGB)
+        frame = cv.cvtColor(frame, cv.COLOR_RGB2BGR)
         if not hasFrame:
             break
         framesQueue.put(frame)
